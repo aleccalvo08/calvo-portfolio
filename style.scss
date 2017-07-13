@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400');
+$openfont: 'Open Sans', sans-serif;
+$merrifont: 'Merriweather', sans-serif;
+
+
 @keyframes diamondscale{
   0%{
    transform: rotate(0deg) scale(0);
@@ -51,15 +57,18 @@
     height: 245px;
     transform: rotate(45deg);
     opacity: 1;
-    animation: diamondscale 700ms ease-out, diamondrotate 750ms ease-out 4000ms forwards;
+    animation: diamondscale 700ms ease-out, diamondrotate 750ms ease-out 3000ms forwards;
     transition: 500ms;
 
     &-intro {
       color: #0077C0;
+      font-family: $merrifont;
+      font-weight: bold;
       font-size: 68.85px;
+      letter-spacing: -0.35px;
       transform: rotate(-45deg);
       opacity: 0;
-      animation: introAni 750ms linear 700ms forwards, introAni2 350ms linear 4000ms forwards;
+      animation: introAni 750ms linear 700ms forwards, introAni2 350ms linear 3000ms forwards;
     }
   }
 
@@ -70,25 +79,36 @@
     margin-top: -90px;
     margin-left: -100px;
     opacity: 0;
-    animation: descOpacity 1000ms linear 4750ms forwards, descMove 650ms ease-out 4800ms forwards;
+    animation: descOpacity 1000ms linear 3750ms forwards, descMove 650ms ease-out 3800ms forwards;
 
     &-name {
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       color: #0077C0;
-      font-size: 26px;
+      font-family: $merrifont;
+      font-weight: bold;
+      letter-spacing: .75px;
+      font-size: 22px;
       opacity: 1;
     }
 
     &-desc {
       width: 200px;
       margin-bottom: 30px;
-      font-size: 16px;
-      line-height: 24px;
+      font-family: $openfont;
+      font-weight: 300;
+      letter-spacing: .30px;
+      font-size: 14px;
+      line-height: 22px;
       color: #0077C0;
     }
 
     &-cta {
-      color: #0077C0;
+      color: tomato;
+      font-family: $openfont;
+      font-weight: 300;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
       text-decoration: none;
     }
   }
