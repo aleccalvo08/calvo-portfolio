@@ -234,3 +234,14 @@
     @media (min-width: 700px) {
       .hero__cta {
         display: none; } }
+  .hero__image {
+    display: none; }
+    @media (min-width: 700px) {
+      .hero__image {
+        display: flex;
+        position: absolute;
+        right: -100px;
+        background: url("../assets/self-photo.png");
+        width: 480px;
+        height: 768px;
+        background-repeat: no-repeat; } }
