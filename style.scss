@@ -41,17 +41,203 @@ $merrifont: 'Merriweather', sans-serif;
   }
 }
 
+@keyframes topMove {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(-210px)
+  }
+}
+
+@keyframes bottomMove {
+  0% {
+    transform: translateX(0)
+  }
+
+  100% {
+    transform: translateX(200px)
+  }
+}
+
+@keyframes leftMove {
+  0% {
+    transform: translateY(0)
+  }
+
+  100% {
+    transform: translateY(210px)
+  }
+}
+
+@keyframes rightMove {
+  0% {
+    transform: translateY(0)
+  }
+
+  100% {
+    transform: translateY(-210px)
+  }
+}
+
+@keyframes diamondrotate2 {
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes infiniteRotation {
+  0% {
+    transform: rotate(-180deg);
+  }
+  10% {
+    transform: rotate(-90deg);
+  }
+  25% {
+    transform: rotate(-90deg);
+  }
+  35% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(90deg);
+  }
+  90% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes wordsOpacity {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+.header {
+  display: flex;
+  width: 100%;
+
+  &__logo {
+    width: 100%;
+    height: 10px;
+    margin-top: 50px;
+    background: url('../assets/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: 700px) {
+      background-position: left;
+      margin-left: 50px;
+    }
+  }
+}
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   height: 100vh;
+
+  .hero__lines {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -140px;
+    width: 280px;
+    height: 280px;
+    font-family: $openfont;
+    font-weight: 300;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #0077C0;
+    background-color: transparent;
+    transform: rotate(45deg);
+    animation: diamondrotate2 750ms ease-out 3000ms forwards, infiniteRotation 9000ms ease-out 6000ms infinite forwards;
+
+    .words-1{
+      display: flex;
+      justify-content: space-between;
+      width: 280px;
+
+      .words__draw {
+        transform: rotate(0deg);
+        margin-left: 15px;
+      }
+
+      .words__code {
+        transform: rotate(90deg);
+        transform-origin: 35% 200%;
+      }
+    }
+
+    .words-2{
+      display: flex;
+      justify-content: space-between;
+      width: 280px;
+      align-items: flex-end;
+      height: 265px;
+
+      .words__play {
+        transform: rotate(270deg);
+        transform-origin: -5% -10%;
+      }
+
+      .words__design {
+        transform: rotate(180deg);
+        transform-origin: 30% 70%;
+      }
+    }
+
+    .words-opacity{
+      opacity: 0;
+      transition: 750ms ease-out;
+      backface-visibility: hidden;
+      animation: wordsOpacity 800ms linear 1600ms forwards;
+    }
+
+    svg line {
+      stroke-width: 1;
+      stroke: #0077C0;
+      transition: 350ms ease-in;
+    }
+
+    &-top {
+      animation: topMove 350ms ease-out 1300ms forwards;
+    }
+
+    &-bottom {
+      animation: bottomMove 350ms ease-out 1300ms forwards;
+    }
+
+    &-left {
+      animation: leftMove 350ms ease-out 1300ms forwards;
+    }
+
+    &-right {
+      animation: rightMove 350ms ease-out 1300ms forwards;
+    }
+  }
 
   &__box1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -122.5px;
+    margin-left: -122.5px;
     background-color: #1F1F1F;
     width: 245px;
     height: 245px;
@@ -76,7 +262,7 @@ $merrifont: 'Merriweather', sans-serif;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -90px;
+    margin-top: -100px;
     margin-left: -100px;
     opacity: 0;
     animation: descOpacity 1000ms linear 3750ms forwards, descMove 650ms ease-out 3800ms forwards;
@@ -103,13 +289,33 @@ $merrifont: 'Merriweather', sans-serif;
     }
 
     &-cta {
-      color: tomato;
+      color: cyan;
       font-family: $openfont;
       font-weight: 300;
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 2px;
       text-decoration: none;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 235px;
+
+    &-call {
+      font-size: 10px;
+      font-family: $openfont;
+      letter-spacing: 2px;
+      line-height: 20px;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: 700px) {
+      display: none;
     }
   }
 }
