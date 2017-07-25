@@ -122,6 +122,17 @@ $merrifont: 'Merriweather', sans-serif;
   100% {opacity: 1}
 }
 
+@keyframes navAni {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .page-wrapper {
   max-width: 1400px;
   margin: 0 auto;
@@ -148,16 +159,15 @@ $merrifont: 'Merriweather', sans-serif;
 
 .hero {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   width: 100%;
   height: 100vh;
+  justify-content: center;
 
   @media (min-width: 700px) {
     background: url('../assets/self-photo.png');
     background-repeat: no-repeat;
     background-position-x: 950px;
+    justify-content: flex-start;
   }
 
   .hero__lines {
@@ -311,6 +321,39 @@ $merrifont: 'Merriweather', sans-serif;
     }
   }
 
+  &__nav {
+    display: none;
+
+    @media (min-width: 700px) {
+      display: flex;
+      margin-top: 170px;
+      margin-left: 50px;
+      opacity: 0;
+      transform: translateY(30px);
+      font-family: $openfont;
+      color: #222222;
+      letter-spacing: 2px;
+      font-size: 10px;
+      list-style: none;
+      text-decoration: none;
+      animation: navAni 500ms ease-out 4000ms forwards;
+
+      &-list ul{
+        margin-bottom: 65px;
+        padding: 15px 0;
+        cursor: pointer;
+        transition: 350ms;
+        transition-timing-function: ease-in;
+      }
+
+      &-list ul:hover{
+        color: #0077C0;
+        transform: translateY(-5px);
+        opacity: .75;
+      }
+    }
+  }
+
   &__cta {
     display: flex;
     justify-content: center;
@@ -330,4 +373,10 @@ $merrifont: 'Merriweather', sans-serif;
       display: none;
     }
   }
+}
+
+.web-design {
+  width: 100%;
+  height: 768px;
+  background-color: #222222;
 }
