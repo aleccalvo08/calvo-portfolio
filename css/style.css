@@ -36,11 +36,23 @@
   100% {
     transform: translateX(-210px); } }
 
+@keyframes topMoveBack {
+  0% {
+    transform: translateX(-210px); }
+  100% {
+    transform: translateX(0); } }
+
 @keyframes bottomMove {
   0% {
     transform: translateX(0); }
   100% {
     transform: translateX(200px); } }
+
+@keyframes bottomMoveBack {
+  0% {
+    transform: translateX(200px); }
+  100% {
+    transform: translateX(0); } }
 
 @keyframes leftMove {
   0% {
@@ -48,11 +60,23 @@
   100% {
     transform: translateY(210px); } }
 
+@keyframes leftMoveBack {
+  0% {
+    transform: translateY(210px); }
+  100% {
+    transform: translateY(0); } }
+
 @keyframes rightMove {
   0% {
     transform: translateY(0); }
   100% {
     transform: translateY(-210px); } }
+
+@keyframes rightMoveBack {
+  0% {
+    transform: translateY(-210px); }
+  100% {
+    transform: translateY(0); } }
 
 @keyframes diamondrotate2 {
   100% {
@@ -91,6 +115,9 @@
   100% {
     opacity: 1;
     transform: translateY(0px); } }
+
+body {
+  overflow: hidden; }
 
 .page-wrapper {
   max-width: 1400px;
@@ -144,10 +171,12 @@
       width: 280px; }
       .hero .hero__lines .words-1 .words__draw {
         transform: rotate(0deg);
-        margin-left: 15px; }
+        margin-left: 15px;
+        transition: 750ms; }
       .hero .hero__lines .words-1 .words__code {
         transform: rotate(90deg);
-        transform-origin: 35% 200%; }
+        transform-origin: 35% 200%;
+        transition: 750ms; }
     .hero .hero__lines .words-2 {
       display: flex;
       justify-content: space-between;
@@ -156,10 +185,12 @@
       height: 265px; }
       .hero .hero__lines .words-2 .words__play {
         transform: rotate(270deg);
-        transform-origin: -5% -10%; }
+        transform-origin: -5% -10%;
+        transition: 750ms; }
       .hero .hero__lines .words-2 .words__design {
         transform: rotate(180deg);
-        transform-origin: 30% 70%; }
+        transform-origin: 30% 70%;
+        transition: 750ms; }
     .hero .hero__lines .words-opacity {
       opacity: 0;
       transition: 750ms ease-out;
@@ -177,6 +208,14 @@
       animation: leftMove 350ms ease-out 1300ms forwards; }
     .hero .hero__lines-right {
       animation: rightMove 350ms ease-out 1300ms forwards; }
+    .hero .hero__lines .top-back {
+      animation: topMoveBack 350ms ease-out forwards; }
+    .hero .hero__lines .bottom-back {
+      animation: bottomMoveBack 350ms ease-out forwards; }
+    .hero .hero__lines .right-back {
+      animation: rightMoveBack 350ms ease-out forwards; }
+    .hero .hero__lines .left-back {
+      animation: leftMoveBack 350ms ease-out forwards; }
   .hero__box1 {
     display: flex;
     justify-content: center;
@@ -272,7 +311,7 @@
       letter-spacing: 2px;
       line-height: 20px;
       text-align: center;
-      margin-bottom: 50px; }
+      margin-bottom: 100px; }
     @media (min-width: 700px) {
       .hero__cta {
         display: none; } }

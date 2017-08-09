@@ -20,4 +20,5 @@ gulp.task('sass', function() {
 gulp.task('default', ['server'], function() {
   gulp.watch("style.scss", ['sass'])
   gulp.watch('*.html').on('change', reload)
+  gulp.watch('js/main.js').on('change', reload)
 });
