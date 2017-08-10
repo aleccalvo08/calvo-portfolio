@@ -19,6 +19,16 @@ $merrifont: 'Merriweather', sans-serif;
   }
 }
 
+@keyframes diamondrotateReverse {
+  0% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
 @keyframes introAni{
   0% { opacity: 0 }
  100% { opacity: 1}
@@ -40,6 +50,22 @@ $merrifont: 'Merriweather', sans-serif;
     transform: translateY(50px);
   }
 }
+
+@keyframes descOpacity2 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes descMove2 {
+    100% {
+    transform: translateY(50px);
+  }
+}
+
 
 @keyframes topMove {
   0% {
@@ -174,7 +200,7 @@ $merrifont: 'Merriweather', sans-serif;
 }
 
 body {
-  overflow: hidden;
+
 }
 
 .page-wrapper {
@@ -384,6 +410,18 @@ body {
       letter-spacing: 2px;
       text-decoration: none;
     }
+  }
+
+  .desc-ani-reverse {
+      animation: descOpacity2 500ms linear;
+  }
+
+  .box-to-circle {
+      border-radius: 200px;
+      transition: 800ms;
+      transition-delay: 500ms;
+      transition-timing-function: ease-out;
+      animation: diamondrotateReverse 1000ms ease-in;
   }
 
 

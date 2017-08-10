@@ -8,5 +8,7 @@ $(document).ready(function () {
     $('.words__code').css("opacity", "0");
     $('.words__play').css("opacity", "0");
     $('.words__design').css("opacity", "0");
+    $('.hero__box2').addClass('desc-ani-reverse');
+    $('.hero__box1').addClass('box-to-circle');
   })
 });

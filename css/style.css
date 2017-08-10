@@ -10,6 +10,12 @@
   100% {
     transform: rotate(180deg); } }
 
+@keyframes diamondrotateReverse {
+  0% {
+    transform: rotate(180deg); }
+  100% {
+    transform: rotate(0); } }
+
 @keyframes introAni {
   0% {
     opacity: 0; }
@@ -28,6 +34,16 @@
 
 @keyframes descMove {
   0% {
+    transform: translateY(50px); } }
+
+@keyframes descOpacity2 {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes descMove2 {
+  100% {
     transform: translateY(50px); } }
 
 @keyframes topMove {
@@ -115,9 +131,6 @@
   100% {
     opacity: 1;
     transform: translateY(0px); } }
-
-body {
-  overflow: hidden; }
 
 .page-wrapper {
   max-width: 1400px;
@@ -274,6 +287,14 @@ body {
       text-transform: uppercase;
       letter-spacing: 2px;
       text-decoration: none; }
+  .hero .desc-ani-reverse {
+    animation: descOpacity2 500ms linear; }
+  .hero .box-to-circle {
+    border-radius: 200px;
+    transition: 800ms;
+    transition-delay: 500ms;
+    transition-timing-function: ease-out;
+    animation: diamondrotateReverse 1000ms ease-in; }
   .hero__nav {
     display: none; }
     @media (min-width: 700px) {
