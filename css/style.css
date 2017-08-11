@@ -365,6 +365,36 @@
         display: none; } }
 
 .web-design {
+  display: flex;
   width: 100%;
   height: 100vh;
   background-color: #222222; }
+  .web-design__box {
+    margin-top: 225px;
+    margin-left: 120px; }
+    .web-design__box-title {
+      position: relative;
+      top: 50px;
+      margin-left: 30px;
+      font-family: "Merriweather", sans-serif;
+      font-weight: bold;
+      font-size: 64px;
+      color: white;
+      letter-spacing: -4px;
+      line-height: 52px; }
+    .web-design__box-link {
+      position: relative;
+      top: 105px;
+      margin-left: 30px;
+      font-family: "Merriweather", sans-serif;
+      font-weight: 300;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased; }
+    .web-design__box svg line {
+      stroke-width: 3px;
+      stroke: white;
+      transition: 350ms ease-in; }
