@@ -366,10 +366,12 @@
 
 .web-design {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 100vh;
   background-color: #222222; }
   .web-design__box {
+    width: 30%;
     margin-top: 225px;
     margin-left: 120px; }
     .web-design__box-title {
@@ -398,3 +400,23 @@
       stroke-width: 3px;
       stroke: white;
       transition: 350ms ease-in; }
+  .web-design__images {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 60%; }
+    .web-design__images-shadow {
+      position: relative;
+      top: 170px;
+      left: 586px;
+      opacity: .5;
+      z-index: 1; }
+    .web-design__images-jones {
+      margin-right: -270px;
+      z-index: 2; }
+    .web-design__images-verve {
+      margin-right: -155px;
+      z-index: 2; }
+    .web-design__images-beastletics {
+      margin-right: 50px;
+      z-index: 2; }
