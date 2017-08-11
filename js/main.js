@@ -12,3 +12,15 @@ $(document).ready(function () {
     $('.hero__box1').addClass('box-to-circle');
   })
 });
+
+
+
+
+// //delay to scrolldown on web-design div after clicking
+// setTimeout( function() {
+//   $('html,body').animate({
+//       scrollTop: $(".web-design").offset().top},
+//       'slow');
+//         },
+//         3000);
+//         //delay ends
