@@ -185,6 +185,7 @@
   justify-content: center; }
   @media (min-width: 700px) {
     .hero {
+      background: url("../assets/self-photo.png");
       background-repeat: no-repeat;
       background-position-x: 950px;
       justify-content: flex-start; } }
@@ -366,18 +367,25 @@
 .web-design {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   height: auto;
-  background-color: #222222; }
+  background-color: #222222;
+  padding-bottom: 115px; }
   @media (min-width: 700px) {
     .web-design {
+      justify-content: space-between;
       flex-wrap: nowrap;
-      height: 100vh; } }
+      height: 100vh;
+      padding-bottom: 0; } }
   .web-design__box {
-    width: 30%;
-    margin-top: 225px;
-    margin-left: 120px; }
+    display: none; }
+    @media (min-width: 700px) {
+      .web-design__box {
+        display: block;
+        width: 30%;
+        margin-top: 225px;
+        margin-left: 120px; } }
     .web-design__box-title {
       position: relative;
       top: 50px;
@@ -412,27 +420,101 @@
       stroke-width: 3px;
       stroke: white;
       transition: 250ms ease-out; }
+  .web-design__box2 {
+    margin-top: 100px; }
+    @media (min-width: 700px) {
+      .web-design__box2 {
+        display: none; } }
+    .web-design__box2-title {
+      position: relative;
+      top: 25px;
+      left: 34px;
+      font-family: "Merriweather", sans-serif;
+      font-weight: bold;
+      font-size: 36px;
+      color: white;
+      letter-spacing: -2px; }
+    .web-design:hover .web-design__box2-top {
+      transform: translate(280px); }
+    .web-design:hover .web-design__box2-right {
+      transform: translateY(92px);
+      transition-delay: 230ms; }
+    .web-design:hover .web-design__box2-bottom {
+      transform: translate(-120px);
+      transition-delay: 460ms; }
+    .web-design__box2-link {
+      position: relative;
+      top: 45px;
+      margin-left: 40px;
+      font-family: "Merriweather", sans-serif;
+      font-weight: 300;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased; }
+    .web-design__box2 svg line {
+      stroke-width: 3px;
+      stroke: white;
+      transition: 250ms ease-out; }
   .web-design__images {
+    margin-top: 85px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%; }
     @media (min-width: 700px) {
       .web-design__images {
+        margin-top: 0;
         justify-content: flex-end;
+        flex-wrap: nowrap;
         width: 60%; } }
     .web-design__images-shadow {
-      position: relative;
-      top: 170px;
-      left: 586px;
-      opacity: .5;
-      z-index: 1; }
+      display: none; }
+      @media (min-width: 700px) {
+        .web-design__images-shadow {
+          display: block;
+          position: relative;
+          opacity: .5;
+          z-index: 1;
+          top: 170px;
+          left: 586px; } }
     .web-design__images-jones {
-      margin-right: -270px;
-      z-index: 2; }
+      z-index: 2;
+      margin-right: -75px; }
+      @media (min-width: 700px) {
+        .web-design__images-jones {
+          margin-right: -270px; } }
     .web-design__images-verve {
-      margin-right: -155px;
-      z-index: 2; }
+      z-index: 2;
+      margin-right: -43px; }
+      @media (min-width: 700px) {
+        .web-design__images-verve {
+          margin-right: -155px; } }
     .web-design__images-beastletics {
-      margin-right: 50px;
       z-index: 2; }
+      @media (min-width: 700px) {
+        .web-design__images-beastletics {
+          margin-right: 50px; } }
+      .web-design__images-beastletics img {
+        width: 120px; }
+        @media (min-width: 700px) {
+          .web-design__images-beastletics img {
+            width: auto; } }
+    .web-design__images img {
+      max-width: 150px; }
+      @media (min-width: 700px) {
+        .web-design__images img {
+          max-width: none; } }
+  .web-design__shadowmobile {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: -150px; }
+    @media (min-width: 700px) {
+      .web-design__shadowmobile {
+        display: none; } }
+    .web-design__shadowmobile img {
+      width: 300px; }
