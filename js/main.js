@@ -10,17 +10,23 @@ $(document).ready(function () {
     $('.words__design').css("opacity", "0");
     $('.hero__box2').addClass('desc-ani-reverse');
     $('.hero__box1').addClass('box-to-circle');
+    setTimeout( function() {
+      $('html,body').animate({
+          scrollTop: $(".web-design").offset().top},
+          'slow');
+            },
+            1800);
   })
 });
 
 
 
 
-// //delay to scrolldown on web-design div after clicking
+//delay to scrolldown on web-design div after clicking
 // setTimeout( function() {
 //   $('html,body').animate({
 //       scrollTop: $(".web-design").offset().top},
 //       'slow');
 //         },
 //         3000);
-//         //delay ends
+        //delay ends

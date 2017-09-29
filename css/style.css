@@ -145,7 +145,7 @@
     margin-left: -122.5px; }
   100% {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     top: 0;
     left: 0;
     margin-top: 0;
@@ -158,6 +158,9 @@
     transform: rotate(180deg); }
   100% {
     transform: rotate(0); } }
+
+html, body {
+  overflow: hidden; }
 
 .page-wrapper {
   max-width: 1400px;
@@ -321,7 +324,7 @@
     transition: 800ms;
     transition-delay: 500ms;
     transition-timing-function: ease-out;
-    animation: diamondrotateReverse 1000ms ease-in, circleToBox 1250ms ease-out 1250ms forwards; }
+    animation: diamondrotateReverse 900ms ease-in, circleToBox 1000ms ease-out 900ms forwards; }
   .hero__nav {
     display: none; }
     @media (min-width: 700px) {
@@ -370,7 +373,7 @@
   justify-content: center;
   width: 100%;
   height: auto;
-  background-color: #222222;
+  background-color: #1F1F1F;
   padding-bottom: 115px; }
   @media (min-width: 700px) {
     .web-design {
