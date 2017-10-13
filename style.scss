@@ -234,9 +234,9 @@ $merrifont: 'Merriweather', sans-serif;
   }
 }
 
-html, body {
-  overflow: hidden;
-}
+// html, body {
+//   overflow: hidden;
+// }
 
 .page-wrapper {
   max-width: 1400px;
@@ -529,8 +529,9 @@ html, body {
   @media (min-width: 700px){
     justify-content: space-between;
     flex-wrap: nowrap;
+    align-items: center;
     height: 100vh;
-    padding-bottom: 0;
+    padding-bottom: 150px;
   }
 
   &__box{
@@ -650,7 +651,7 @@ html, body {
     width: 100%;
 
     @media (min-width: 700px ){
-      margin-top: 0;
+      margin-top: 200px;
       justify-content: flex-end;
       flex-wrap: nowrap;
       width: 60%;
@@ -725,5 +726,56 @@ html, body {
       img {
         width: 300px;
       }
+  }
+}
+
+.illustration {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #0077C0;
+  padding-top: 100px;
+
+  &__image {
+    width: 523px;
+    height: 567px;
+    background-color: black;
+    opacity: .75;
+  }
+
+  &__box {
+
+    &-title {
+      position: relative;
+      width: 136px;
+      top: 60px;
+      left: 50px;
+      font-family: $merrifont;
+      font-weight: bold;
+      font-size: 64px;
+      color: #C7EEFF;
+      letter-spacing: -4px;
+      line-height: 52px;
+    }
+
+    &-link {
+      position: relative;
+      top: 128px;
+      left: 55px;
+      font-family: $merrifont;
+      font-weight: 300;
+      text-decoration: none;
+      color: #C7EEFF;
+      font-size: 18px;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased;
+    }
+
+    svg line {
+      stroke-width: 3px;
+      stroke: white;
+      transition: 250ms ease-out;
+    }
   }
 }
