@@ -734,13 +734,11 @@ $merrifont: 'Merriweather', sans-serif;
   justify-content: space-around;
   align-items: center;
   background-color: #0077C0;
-  padding-top: 100px;
+  padding: 100px 0;
 
   &__image {
     width: 523px;
     height: 567px;
-    background-color: black;
-    opacity: .75;
   }
 
   &__box {

@@ -525,12 +525,10 @@
   justify-content: space-around;
   align-items: center;
   background-color: #0077C0;
-  padding-top: 100px; }
+  padding: 100px 0; }
   .illustration__image {
     width: 523px;
-    height: 567px;
-    background-color: black;
-    opacity: .75; }
+    height: 567px; }
   .illustration__box-title {
     position: relative;
     width: 136px;
