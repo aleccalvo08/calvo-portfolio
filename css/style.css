@@ -526,9 +526,25 @@
   align-items: center;
   background-color: #0077C0;
   padding: 100px 0; }
+  .illustration:hover svg {
+    stroke-dashoffset: 0; }
+  .illustration:hover .illustration__box-top {
+    transform: translateX(-231px); }
+  .illustration:hover .illustration__box-left {
+    transform: translateY(345px);
+    transition-delay: 230ms; }
+  .illustration:hover .illustration__box-bottom {
+    transform: translateX(40px);
+    transition-delay: 460ms; }
   .illustration__image {
-    width: 523px;
-    height: 567px; }
+    width: 570px;
+    height: 600px; }
+    .illustration__image svg {
+      stroke-dashoffset: 700;
+      stroke-dasharray: 700;
+      transition: 2500ms;
+      transition-timing-function: ease;
+      transition-delay: 300ms; }
   .illustration__box-title {
     position: relative;
     width: 136px;

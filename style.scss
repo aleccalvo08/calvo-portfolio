@@ -736,9 +736,35 @@ $merrifont: 'Merriweather', sans-serif;
   background-color: #0077C0;
   padding: 100px 0;
 
+  &:hover svg {
+    stroke-dashoffset: 0;
+  }
+
+  &:hover &__box-top {
+    transform: translateX(-231px);
+  }
+
+  &:hover &__box-left {
+    transform: translateY(345px);
+    transition-delay: 230ms;
+  }
+
+  &:hover &__box-bottom {
+    transform: translateX(40px);
+    transition-delay: 460ms;
+  }
+
   &__image {
-    width: 523px;
-    height: 567px;
+    width: 570px;
+    height: 600px;
+
+    svg {
+      stroke-dashoffset: 700;
+      stroke-dasharray: 700;
+      transition: 2500ms;
+      transition-timing-function: ease;
+      transition-delay: 300ms;
+    }
   }
 
   &__box {
