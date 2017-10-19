@@ -234,6 +234,22 @@ $merrifont: 'Merriweather', sans-serif;
   }
 }
 
+@keyframes imageRightFloat {
+  0% {transform: translateX(0);}
+  50% {
+    transform: translateX(30px);
+  }
+  100% {transform: translateX(0);}
+}
+
+@keyframes imageLeftFloat {
+  0% {transform: translateX(0);}
+  50% {
+    transform: translateX(-30px);
+  }
+  100% {transform: translateX(0);}
+}
+
 // html, body {
 //   overflow: hidden;
 // }
@@ -578,9 +594,15 @@ $merrifont: 'Merriweather', sans-serif;
       text-decoration: none;
       color: white;
       font-size: 18px;
+      transition: 350ms;
+      transition-timing-function: ease;
       -webkit-font-smoothing: antialiased;
       -moz-font-smoothing: antialiased;
       -o-font-smoothing: antialiased;
+
+      &:hover {
+        margin-left: 40px;
+      }
     }
 
     svg line {
@@ -607,29 +629,15 @@ $merrifont: 'Merriweather', sans-serif;
       letter-spacing: -2px;
     }
 
-    .web-design:hover &-top {
-      transform: translate(280px);
-    }
-
-    .web-design:hover &-right {
-      transform: translateY(92px);
-      transition-delay: 230ms;
-    }
-
-    .web-design:hover &-bottom {
-      transform: translate(-120px);
-      transition-delay: 460ms;
-    }
-
     &-link {
       position: relative;
       top: 45px;
-      margin-left: 40px;
+      margin-left: 75px;
       font-family: $merrifont;
       font-weight: 300;
       text-decoration: none;
       color: white;
-      font-size: 18px;
+      font-size: 12px;
       -webkit-font-smoothing: antialiased;
       -moz-font-smoothing: antialiased;
       -o-font-smoothing: antialiased;
@@ -655,6 +663,14 @@ $merrifont: 'Merriweather', sans-serif;
       justify-content: flex-end;
       flex-wrap: nowrap;
       width: 60%;
+
+      &-jones {
+        animation: imageLeftFloat 18s ease infinite;
+      }
+
+      &-beastletics {
+        animation: imageRightFloat 18s ease infinite;
+      }
     }
 
     &-shadow {
@@ -731,13 +747,18 @@ $merrifont: 'Merriweather', sans-serif;
 
 .illustration {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: #0077C0;
   padding: 100px 0;
 
-  &:hover svg {
-    stroke-dashoffset: 0;
+  @media (min-width: 900px){
+    align-items: center;
+    justify-content: space-around;
+
+    &:hover svg {
+      stroke-dashoffset: 0;
+    }
   }
 
   &:hover &__box-top {
@@ -755,42 +776,102 @@ $merrifont: 'Merriweather', sans-serif;
   }
 
   &__image {
-    width: 570px;
-    height: 600px;
+
+    width: 350px;
+
+    @media (min-width: 900px) {
+      width: 570px;
+      height: 600px;
+    }
 
     svg {
-      stroke-dashoffset: 700;
       stroke-dasharray: 700;
       transition: 2500ms;
       transition-timing-function: ease;
       transition-delay: 300ms;
+
+      @media(min-width: 900px){
+        stroke-dashoffset: 700;
+      }
     }
   }
 
   &__box {
+    display: none;
+
+    @media (min-width: 900px){
+      display: block;
+
+      &-title {
+        position: relative;
+        width: 136px;
+        top: 60px;
+        left: 50px;
+        font-family: $merrifont;
+        font-weight: bold;
+        font-size: 64px;
+        color: #C7EEFF;
+        letter-spacing: -4px;
+        line-height: 52px;
+      }
+
+      &-link {
+        position: relative;
+        top: 128px;
+        left: 55px;
+        font-family: $merrifont;
+        font-weight: 300;
+        text-decoration: none;
+        color: #C7EEFF;
+        font-size: 18px;
+        transition: 350ms;
+        transition-timing-function: ease;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -o-font-smoothing: antialiased;
+
+        &:hover {
+          left: 50px;
+        }
+      }
+
+      svg line {
+        stroke-width: 3px;
+        stroke: white;
+        transition: 250ms ease-out;
+      }
+    }
+
+  }
+
+  &__box2 {
+    padding-bottom: 70px;
+
+    @media (min-width: 700px){
+      display: none;
+    }
 
     &-title {
       position: relative;
-      width: 136px;
-      top: 60px;
-      left: 50px;
+      top: 27px;
+      left: 10px;
       font-family: $merrifont;
       font-weight: bold;
-      font-size: 64px;
-      color: #C7EEFF;
-      letter-spacing: -4px;
-      line-height: 52px;
+      font-size: 36px;
+      color: white;
+      letter-spacing: -2px;
+      text-transform: uppercase;
     }
 
     &-link {
       position: relative;
-      top: 128px;
-      left: 55px;
+      top: 45px;
+      margin-left: 130px;
       font-family: $merrifont;
       font-weight: 300;
       text-decoration: none;
-      color: #C7EEFF;
-      font-size: 18px;
+      color: white;
+      font-size: 12px;
       -webkit-font-smoothing: antialiased;
       -moz-font-smoothing: antialiased;
       -o-font-smoothing: antialiased;

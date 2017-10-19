@@ -159,6 +159,22 @@
   100% {
     transform: rotate(0); } }
 
+@keyframes imageRightFloat {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(30px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes imageLeftFloat {
+  0% {
+    transform: translateX(0); }
+  50% {
+    transform: translateX(-30px); }
+  100% {
+    transform: translateX(0); } }
+
 .page-wrapper {
   max-width: 1400px;
   margin: 0 auto; }
@@ -414,9 +430,13 @@
       text-decoration: none;
       color: white;
       font-size: 18px;
+      transition: 350ms;
+      transition-timing-function: ease;
       -webkit-font-smoothing: antialiased;
       -moz-font-smoothing: antialiased;
       -o-font-smoothing: antialiased; }
+      .web-design__box-link:hover {
+        margin-left: 40px; }
     .web-design__box svg line {
       stroke-width: 3px;
       stroke: white;
@@ -435,23 +455,15 @@
       font-size: 36px;
       color: white;
       letter-spacing: -2px; }
-    .web-design:hover .web-design__box2-top {
-      transform: translate(280px); }
-    .web-design:hover .web-design__box2-right {
-      transform: translateY(92px);
-      transition-delay: 230ms; }
-    .web-design:hover .web-design__box2-bottom {
-      transform: translate(-120px);
-      transition-delay: 460ms; }
     .web-design__box2-link {
       position: relative;
       top: 45px;
-      margin-left: 40px;
+      margin-left: 75px;
       font-family: "Merriweather", sans-serif;
       font-weight: 300;
       text-decoration: none;
       color: white;
-      font-size: 18px;
+      font-size: 12px;
       -webkit-font-smoothing: antialiased;
       -moz-font-smoothing: antialiased;
       -o-font-smoothing: antialiased; }
@@ -471,7 +483,11 @@
         margin-top: 200px;
         justify-content: flex-end;
         flex-wrap: nowrap;
-        width: 60%; } }
+        width: 60%; }
+        .web-design__images-jones {
+          animation: imageLeftFloat 18s ease infinite; }
+        .web-design__images-beastletics {
+          animation: imageRightFloat 18s ease infinite; } }
     .web-design__images-shadow {
       display: none; }
       @media (min-width: 700px) {
@@ -522,12 +538,16 @@
 
 .illustration {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   background-color: #0077C0;
   padding: 100px 0; }
-  .illustration:hover svg {
-    stroke-dashoffset: 0; }
+  @media (min-width: 900px) {
+    .illustration {
+      align-items: center;
+      justify-content: space-around; }
+      .illustration:hover svg {
+        stroke-dashoffset: 0; } }
   .illustration:hover .illustration__box-top {
     transform: translateX(-231px); }
   .illustration:hover .illustration__box-left {
@@ -537,38 +557,83 @@
     transform: translateX(40px);
     transition-delay: 460ms; }
   .illustration__image {
-    width: 570px;
-    height: 600px; }
+    width: 350px; }
+    @media (min-width: 900px) {
+      .illustration__image {
+        width: 570px;
+        height: 600px; } }
     .illustration__image svg {
-      stroke-dashoffset: 700;
       stroke-dasharray: 700;
       transition: 2500ms;
       transition-timing-function: ease;
       transition-delay: 300ms; }
-  .illustration__box-title {
-    position: relative;
-    width: 136px;
-    top: 60px;
-    left: 50px;
-    font-family: "Merriweather", sans-serif;
-    font-weight: bold;
-    font-size: 64px;
-    color: #C7EEFF;
-    letter-spacing: -4px;
-    line-height: 52px; }
-  .illustration__box-link {
-    position: relative;
-    top: 128px;
-    left: 55px;
-    font-family: "Merriweather", sans-serif;
-    font-weight: 300;
-    text-decoration: none;
-    color: #C7EEFF;
-    font-size: 18px;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: antialiased;
-    -o-font-smoothing: antialiased; }
-  .illustration__box svg line {
-    stroke-width: 3px;
-    stroke: white;
-    transition: 250ms ease-out; }
+      @media (min-width: 900px) {
+        .illustration__image svg {
+          stroke-dashoffset: 700; } }
+  .illustration__box {
+    display: none; }
+    @media (min-width: 900px) {
+      .illustration__box {
+        display: block; }
+        .illustration__box-title {
+          position: relative;
+          width: 136px;
+          top: 60px;
+          left: 50px;
+          font-family: "Merriweather", sans-serif;
+          font-weight: bold;
+          font-size: 64px;
+          color: #C7EEFF;
+          letter-spacing: -4px;
+          line-height: 52px; }
+        .illustration__box-link {
+          position: relative;
+          top: 128px;
+          left: 55px;
+          font-family: "Merriweather", sans-serif;
+          font-weight: 300;
+          text-decoration: none;
+          color: #C7EEFF;
+          font-size: 18px;
+          transition: 350ms;
+          transition-timing-function: ease;
+          -webkit-font-smoothing: antialiased;
+          -moz-font-smoothing: antialiased;
+          -o-font-smoothing: antialiased; }
+          .illustration__box-link:hover {
+            left: 50px; }
+        .illustration__box svg line {
+          stroke-width: 3px;
+          stroke: white;
+          transition: 250ms ease-out; } }
+  .illustration__box2 {
+    padding-bottom: 70px; }
+    @media (min-width: 700px) {
+      .illustration__box2 {
+        display: none; } }
+    .illustration__box2-title {
+      position: relative;
+      top: 27px;
+      left: 10px;
+      font-family: "Merriweather", sans-serif;
+      font-weight: bold;
+      font-size: 36px;
+      color: white;
+      letter-spacing: -2px;
+      text-transform: uppercase; }
+    .illustration__box2-link {
+      position: relative;
+      top: 45px;
+      margin-left: 130px;
+      font-family: "Merriweather", sans-serif;
+      font-weight: 300;
+      text-decoration: none;
+      color: white;
+      font-size: 12px;
+      -webkit-font-smoothing: antialiased;
+      -moz-font-smoothing: antialiased;
+      -o-font-smoothing: antialiased; }
+    .illustration__box2 svg line {
+      stroke-width: 3px;
+      stroke: white;
+      transition: 250ms ease-out; }
