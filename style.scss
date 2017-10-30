@@ -884,3 +884,75 @@ $merrifont: 'Merriweather', sans-serif;
     }
   }
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 90px 0;
+  background-color: #1F1F1F;
+
+  &__title {
+    color: white;
+    font-family: $merrifont;
+    font-size: 22px;
+    letter-spacing: .4px;
+    font-weight: 300;
+
+    @media (min-width: 700px){
+      font-size: 24px;
+      letter-spacing: .6px;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 20px 0;
+
+    @media (min-width: 700px){
+      padding: 60px 0;
+    }
+
+    &-buttons{
+      width: 145px;
+      height: 145px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 14px #171717;
+      margin-left: 20px;
+      margin-top: 40px;
+      transition: 350ms;
+
+      @media (min-width: 700px){
+        margin-left: 55px;
+        margin-top: 0;
+
+        &:hover {
+          background-color: #0077C0;
+        }
+      }
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:nth-of-type(3){
+        margin-left: 0;
+        @media (min-width: 700px){
+          margin-left: 55px;
+        }
+      }
+    }
+  }
+}
+
+.copyright {
+  color: white;
+  font-family: $merrifont;
+  font-size: 12px;
+  font-weight: lighter;
+  letter-spacing: .25px;
+}
