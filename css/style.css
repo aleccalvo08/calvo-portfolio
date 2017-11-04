@@ -298,10 +298,15 @@
       opacity: 0;
       animation: introAni 750ms linear 700ms forwards, introAni2 350ms linear 3000ms forwards; }
   .hero__box2 {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 245px;
+    height: 150px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -100px;
+    margin-top: -80px;
     margin-left: -100px;
     opacity: 0;
     animation: descOpacity 1000ms linear 3750ms forwards, descMove 650ms ease-out 3800ms forwards; }
@@ -323,12 +328,11 @@
       line-height: 22px;
       color: #0077C0; }
     .hero__box2-cta {
-      color: cyan;
+      color: #FF9A3C;
       font-family: "Open Sans", sans-serif;
       font-weight: 300;
       font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: .25px;
       text-decoration: none;
       text-align: center; }
   .hero .desc-ani-reverse {

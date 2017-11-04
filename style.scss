@@ -423,10 +423,15 @@ $merrifont: 'Merriweather', sans-serif;
   }
 
   &__box2 {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 245px;
+    height: 150px;
     position: absolute;
     top: 50%;
     left: 50%;
-    margin-top: -100px;
+    margin-top: -80px;
     margin-left: -100px;
     opacity: 0;
     animation: descOpacity 1000ms linear 3750ms forwards, descMove 650ms ease-out 3800ms forwards;
@@ -453,12 +458,11 @@ $merrifont: 'Merriweather', sans-serif;
     }
 
     &-cta {
-      color: cyan;
+      color: #FF9A3C;
       font-family: $openfont;
       font-weight: 300;
       font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: .25px;
       text-decoration: none;
       text-align: center;
     }
