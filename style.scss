@@ -255,7 +255,6 @@ $merrifont: 'Merriweather', sans-serif;
 // }
 
 .page-wrapper {
-  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -287,7 +286,7 @@ $merrifont: 'Merriweather', sans-serif;
   @media (min-width: 700px) {
     background: url('../assets/self-photo.png');
     background-repeat: no-repeat;
-    background-position-x: 950px;
+    background-position: right -200px center;
     justify-content: flex-start;
   }
 
@@ -536,15 +535,19 @@ $merrifont: 'Merriweather', sans-serif;
 
 }
 
-
+.web-design-container {
+  display: flex;
+  justify-content: center;
+  background-color: #1F1F1F;
+}
 
 .web-design {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  max-width: 1600px;
   height: auto;
-  background-color: #1F1F1F;
   padding-bottom: 115px;
 
   @media (min-width: 700px){
@@ -561,7 +564,7 @@ $merrifont: 'Merriweather', sans-serif;
       display: block;
       width: 30%;
       margin-top: 225px;
-      margin-left: 120px;
+      margin-left: 100px;
     }
 
     &-title {
@@ -951,7 +954,7 @@ $merrifont: 'Merriweather', sans-serif;
         &:hover .phone-container .phone-icon {
           fill: #ffffff;
         }
-        &:hover .facebook-container .facebook-icon {
+        &:hover .linkedin-container .linkedin-icon {
           fill: #ffffff;
         }
         &:hover .instagram-container .instagram-icon {
@@ -985,10 +988,10 @@ $merrifont: 'Merriweather', sans-serif;
           transition: 350ms;
         }
       }
-      .facebook-container {
-        width: 20px;
+      .linkedin-container {
+        width: 30px;
 
-        .facebook-icon {
+        .linkedin-icon {
           fill: #0077C0;
           transition: 350ms;
         }
