@@ -176,7 +176,6 @@
     transform: translateX(0); } }
 
 .page-wrapper {
-  max-width: 1400px;
   margin: 0 auto; }
 
 .header {
@@ -203,7 +202,7 @@
     .hero {
       background: url("../assets/self-photo.png");
       background-repeat: no-repeat;
-      background-position-x: 950px;
+      background-position: right -200px center;
       justify-content: flex-start; } }
   .hero .hero__lines {
     position: absolute;
@@ -377,7 +376,11 @@
     .hero__cta-call {
       font-size: 10px;
       font-family: "Open Sans", sans-serif;
+<<<<<<< HEAD
       letter-spacing: 0px;
+=======
+      letter-spacing: 0.25px;
+>>>>>>> master
       line-height: 20px;
       text-align: center;
       margin-bottom: 100px; }
@@ -385,13 +388,18 @@
       .hero__cta {
         display: none; } }
 
+.web-design-container {
+  display: flex;
+  justify-content: center;
+  background-color: #1F1F1F; }
+
 .web-design {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  max-width: 1600px;
   height: auto;
-  background-color: #1F1F1F;
   padding-bottom: 115px; }
   @media (min-width: 700px) {
     .web-design {
@@ -407,7 +415,7 @@
         display: block;
         width: 30%;
         margin-top: 225px;
-        margin-left: 120px; } }
+        margin-left: 100px; } }
     .web-design__box-title {
       position: relative;
       top: 50px;
@@ -694,7 +702,7 @@
             fill: #ffffff; }
           .contact__social-buttons:hover .phone-container .phone-icon {
             fill: #ffffff; }
-          .contact__social-buttons:hover .facebook-container .facebook-icon {
+          .contact__social-buttons:hover .linkedin-container .linkedin-icon {
             fill: #ffffff; }
           .contact__social-buttons:hover .instagram-container .instagram-icon {
             fill: #ffffff; } }
@@ -715,9 +723,9 @@
         .contact__social-buttons .phone-container .phone-icon {
           fill: #0077C0;
           transition: 350ms; }
-      .contact__social-buttons .facebook-container {
-        width: 20px; }
-        .contact__social-buttons .facebook-container .facebook-icon {
+      .contact__social-buttons .linkedin-container {
+        width: 30px; }
+        .contact__social-buttons .linkedin-container .linkedin-icon {
           fill: #0077C0;
           transition: 350ms; }
       .contact__social-buttons .instagram-container {
