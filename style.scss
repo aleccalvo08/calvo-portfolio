@@ -250,6 +250,17 @@ $merrifont: 'Merriweather', sans-serif;
   100% {transform: translateX(0);}
 }
 
+@keyframes scrollLine {
+    0%{
+      transform: translateY(0);
+    }
+    35%{
+      transform: translateY(200px);
+    }
+    100%{
+      transform: translateY(200px);
+    }
+}
 // html, body {
 //   overflow: hidden;
 // }
@@ -513,6 +524,21 @@ $merrifont: 'Merriweather', sans-serif;
     }
   }
 
+  &__scroll {
+    width: 1px;
+    height: 100px;
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    overflow: hidden;
+
+    &-line {
+      stroke-width: 1px;
+      stroke: #1f1f1f;
+      animation: scrollLine 3000ms ease infinite 3500ms;
+    }
+  }
+
   &__cta {
     display: flex;
     justify-content: center;
@@ -538,7 +564,10 @@ $merrifont: 'Merriweather', sans-serif;
 .web-design-container {
   display: flex;
   justify-content: center;
-  background-color: #1F1F1F;
+  background: url('../assets/web-design-bg.jpg');
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: fixed;
 }
 
 .web-design {
@@ -738,7 +767,7 @@ $merrifont: 'Merriweather', sans-serif;
     }
 
   &__shadowmobile {
-      display: flex;
+      display: none;
       justify-content: center;
       width: 100%;
       margin-top: -150px;
