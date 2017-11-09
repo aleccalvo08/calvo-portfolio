@@ -183,6 +183,87 @@
   100% {
     transform: translateY(200px); } }
 
+@keyframes webMobileTop {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(280px); } }
+
+@keyframes webMobileRight {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(92px); } }
+
+@keyframes webMobileBottom {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-120px); } }
+
+@keyframes webMobileTopBack {
+  0% {
+    transform: translateX(280px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes webMobileRightBack {
+  0% {
+    transform: translateY(92px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes webMobileBottomBack {
+  0% {
+    transform: translateX(-120px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes illuMobileTopBack {
+  0% {
+    transform: translateX(-280px); }
+  100% {
+    transform: translateX(0px); } }
+
+@keyframes illuMobileRight {
+  0% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(90px); } }
+
+@keyframes illuMobileBottom {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(116px); } }
+
+@keyframes illuMobileTop {
+  0% {
+    transform: translateX(0); }
+  100% {
+    transform: translateX(-280px); } }
+
+@keyframes illuMobileRightBack {
+  0% {
+    transform: translateY(90px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes illuMobileBottomBack {
+  0% {
+    transform: translateX(116px); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes illuMobileSvg {
+  0% {
+    stroke-dashoffset: 700; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+.illustration-mobile-svg-ani {
+  animation: illuMobileSvg 2500ms ease forwards; }
+
 .page-wrapper {
   margin: 0 auto; }
 
@@ -393,12 +474,13 @@
     align-self: flex-end;
     width: 235px; }
     .hero__cta-call {
+      display: none;
       font-size: 10px;
       font-family: "Open Sans", sans-serif;
       letter-spacing: 0.25px;
       line-height: 20px;
       text-align: center;
-      margin-bottom: 100px; }
+      margin-bottom: 180px; }
     @media (min-width: 700px) {
       .hero__cta {
         display: none; } }
@@ -595,6 +677,7 @@
         height: 600px; } }
     .illustration__image svg {
       stroke-dasharray: 700;
+      stroke-dashoffset: 700;
       transition: 2500ms;
       transition-timing-function: ease;
       transition-delay: 300ms; }
@@ -766,3 +849,39 @@
   font-size: 12px;
   font-weight: lighter;
   letter-spacing: .25px; }
+
+.web-mobile-top-go {
+  animation: webMobileTop 250ms ease-out forwards; }
+
+.web-mobile-top-back {
+  animation: webMobileTopBack 250ms ease-out forwards; }
+
+.web-mobile-right-go {
+  animation: webMobileRight 250ms ease-out forwards; }
+
+.web-mobile-right-back {
+  animation: webMobileRightBack 250ms ease-out forwards; }
+
+.web-mobile-bottom-go {
+  animation: webMobileBottom 250ms ease-out forwards; }
+
+.web-mobile-bottom-back {
+  animation: webMobileBottomBack 250ms ease-out forwards; }
+
+.illustration-mobile-top-go {
+  animation: illuMobileTop 250ms ease-out forwards; }
+
+.illustration-mobile-top-back {
+  animation: illuMobileTopBack 250ms ease-out forwards; }
+
+.illustration-mobile-right-go {
+  animation: illuMobileRight 250ms ease-out forwards; }
+
+.illustration-mobile-right-back {
+  animation: illuMobileRightBack 250ms ease-out forwards; }
+
+.illustration-mobile-bottom-go {
+  animation: illuMobileBottom 250ms ease-out forwards; }
+
+.illustration-mobile-bottom-back {
+  animation: illuMobileBottomBack 250ms ease-out forwards; }
