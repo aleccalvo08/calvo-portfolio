@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Calvo.</title>
+    <title>CALVO</title>
     <meta name="description" content="">
     <meta name="author" content="Alec">
 
@@ -51,7 +51,7 @@
           <h2 class="hero__box2-name">I'm Alec</h2>
           <p class="hero__box2-desc">A full-time designer/developer and a freelance illustrator based in Toronto.
           </p>
-          <a href="#" class="hero__box2-cta">Scroll down to see my works.</a>
+          <a href="#" class="hero__box2-cta">email: aleccalvo08@gmail.com</a>
         </div>
         <div class="hero__nav">
           <li class="hero__nav-list">
@@ -59,6 +59,11 @@
             <ul class="hero__nav-list__projects">PROJECTS</ul>
             <ul class="hero__nav-list__contact">CONTACT</ul>
           </li>
+        </div>
+        <div class="hero__scroll">
+          <svg class="hero__scroll-container">
+            <line class="hero__scroll-line" x1="0" y1="-100" x2="0" y2="0">
+          </svg>
         </div>
         <div class="hero__cta">
           <p class="hero__cta-call">This looks better on desktop. Just Saying.</p>
@@ -86,9 +91,9 @@
                 </h1>
                 <a href="http://www.behance.net/aleccalvo2" target="_blank" class="web-design__box2-link">See Projects</a>
               </foreignobject>
-              <line class="web-design__box2-top" x1="0" y1="0" x2="280" y2="0"/>
-              <line class="web-design__box2-right" x1="280" y1="0" x2="280" y2="92"/>
-              <line class="web-design__box2-bottom" x1="160" y1="92" x2="280" y2="92"/>
+              <line class="web-design__box2-top" x1="-280" y1="0" x2="0" y2="0"/>
+              <line class="web-design__box2-right" x1="280" y1="-92" x2="280" y2="0"/>
+              <line class="web-design__box2-bottom" x1="280" y1="92" x2="400" y2="92"/>
             </svg>
           </div>
           <div class="web-design__images">
@@ -116,13 +121,13 @@
               </h1>
               <a href="https://www.artstation.com/aleccalvo08" target="_blank" class="illustration__box2-link">View Gallery</a>
             </foreignobject>
-            <line class="illustration__box2-top" x1="0" y1="0" x2="280" y2="0"/>
-            <line class="illustration__box2-right" x1="0" y1="0" x2="0" y2="90"/>
-            <line class="illustration__box2-bottom" x1="0" y1="92" x2="116" y2="92"/>
+            <line class="illustration__box2-top" x1="280" y1="0" x2="560" y2="0"/>
+            <line class="illustration__box2-right" x1="0" y1="-90" x2="0" y2="00"/>
+            <line class="illustration__box2-bottom" x1="-116" y1="92" x2="0" y2="92"/>
           </svg>
         </div>
         <div class="illustration__image">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 573.78 620.98">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 573.78 620.98" class="illustration__image-svg">
             <defs>
               <style>
                 .cls-1{fill:none;stroke:#000;stroke-miterlimit:10;stroke-width:0.5px;}
@@ -238,7 +243,9 @@
       <div class="contact">
         <h1 class="contact__title">Get in touch with me.</h1>
         <div class="contact__social">
-              <a class="contact__social-buttons" href="mailto:aleccalvo08@gmail.com" target="_blank">
+              <a class="contact__social-buttons"
+                 href="mailto:aleccalvo08@gmail.com"
+                 target="_blank">
               <svg class="email-container" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 28">
                 <g id="Layer_2" data-name="Layer 2">
                   <path class="email-icon" d="M2 0h36a2 2 0 0 1 .67.12L21.36 17.43a1.91 1.91 0 0 1-2.71 0L1.33.12A2 2 0 0 1 2 0zM0 26V2a2 2 0 0 1 0-.35L12.38 14 0 26.35A2 2 0 0 1 0 26zm38 2H2a2 2 0 0 1-.67-.12L13.8 15.41l3.43 3.43a3.91 3.91 0 0 0 5.54 0l3.43-3.43 12.47 12.47A2 2 0 0 1 38 28zm2-2a2 2 0 0 1 0 .35L27.62 14 40 1.65A2 2 0 0 1 40 2z" id="Web"/>
@@ -272,6 +279,7 @@
     </div>
 
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
     <script src="js/main.js"></script>
 
   </body>

@@ -29,4 +29,45 @@ $(document).ready(function () {
         scrollTop: $(".contact").offset().top},
         'slow');
           });
+
+  var waypoints = $('.web-design').waypoint(function(direction) {
+    if (direction == 'down') {
+      $('.web-design__box2-top').addClass('web-mobile-top-go')
+      $('.web-design__box2-right').addClass('web-mobile-right-go')
+      $('.web-design__box2-bottom').addClass('web-mobile-bottom-go')
+      $('.web-design__box2-top').removeClass('web-mobile-top-back')
+      $('.web-design__box2-right').removeClass('web-mobile-right-back')
+      $('.web-design__box2-bottom').removeClass('web-mobile-bottom-back')
+    } else {
+      $('.web-design__box2-top').addClass('web-mobile-top-back')
+      $('.web-design__box2-right').addClass('web-mobile-right-back')
+      $('.web-design__box2-bottom').addClass('web-mobile-bottom-back')
+      $('.web-design__box2-top').removeClass('web-mobile-top-go')
+      $('.web-design__box2-right').removeClass('web-mobile-right-go')
+      $('.web-design__box2-bottom').removeClass('web-mobile-bottom-go')
+    }
+  }, {
+    offset: 100
+  })
+
+  var waypoints2 = $('.illustration').waypoint(function(direction) {
+    if (direction == 'down') {
+      $('.illustration__box2-top').addClass('illustration-mobile-top-go')
+      $('.illustration__box2-top').removeClass('illustration-mobile-top-back')
+      $('.illustration__box2-right').addClass('illustration-mobile-right-go')
+      $('.illustration__box2-right').removeClass('illustration-mobile-right-back')
+      $('.illustration__box2-bottom').addClass('illustration-mobile-bottom-go')
+      $('.illustration__box2-bottom').removeClass('illustration-mobile-bottom-back')
+      $('.illustration__image-svg').addClass('illustration-mobile-svg-ani')
+    } else {
+      $('.illustration__box2-top').addClass('illustration-mobile-top-back')
+      $('.illustration__box2-top').removeClass('illustration-mobile-top-go')
+      $('.illustration__box2-right').addClass('illustration-mobile-right-back')
+      $('.illustration__box2-right').removeClass('illustration-mobile-right-go')
+      $('.illustration__box2-bottom').addClass('illustration-mobile-bottom-back')
+      $('.illustration__box2-bottom').removeClass('illustration-mobile-bottom-go')
+    }
+  }, {
+    offset: 100
+  })
 });
