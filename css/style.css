@@ -805,7 +805,7 @@
             fill: #ffffff; }
           .contact__social-buttons:hover .linkedin-container .linkedin-icon {
             fill: #ffffff; }
-          .contact__social-buttons:hover .behance-container2 .behance-icon2 {
+          .contact__social-buttons:hover .behance-container .behance-icon {
             fill: #ffffff; } }
       .contact__social-buttons:first-of-type {
         margin-left: 0; }
@@ -829,9 +829,9 @@
         .contact__social-buttons .linkedin-container .linkedin-icon {
           fill: #0077C0;
           transition: 350ms; }
-      .contact__social-buttons .behance-container2 {
+      .contact__social-buttons .behance-container {
         width: 45px; }
-        .contact__social-buttons .behance-container2 .behance-icon2 {
+        .contact__social-buttons .behance-container .behance-icon {
           fill: #0077C0;
           transition: 350ms; }
 
