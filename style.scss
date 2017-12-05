@@ -1122,7 +1122,7 @@ $merrifont: 'Merriweather', sans-serif;
         &:hover .linkedin-container .linkedin-icon {
           fill: #ffffff;
         }
-        &:hover .instagram-container .instagram-icon {
+        &:hover .behance-container .behance-icon {
           fill: #ffffff;
         }
       }
@@ -1161,10 +1161,10 @@ $merrifont: 'Merriweather', sans-serif;
           transition: 350ms;
         }
       }
-      .instagram-container {
-        width: 35px;
+      .behance-container {
+        width: 45px;
 
-        .instagram-icon {
+        .behance-icon {
           fill: #0077C0;
           transition: 350ms;
         }
